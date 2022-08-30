@@ -44,7 +44,6 @@ public class KokosConfiguration {
     }
 
     public static KokosConfiguration getInstance() {
-        Objects.requireNonNull(KOKOS_CONFIGURATION_PROVIDER, "You need register kokos configuration supplier");
-        return KOKOS_CONFIGURATION_PROVIDER.apply(null);
+        return getInstance(null);
     }
 }
